@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ionic Capacitor Method Examples
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,38 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Ionic Capacitor Method Examples</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>Void Method example</h2>
+    <div class="row">
+      <ion-input color="primary" [(ngModel)]="alertText"></ion-input>
+      <ion-button (click)="openAlert()">Open alert</ion-button>
+    </div>
+
+    <h2>Value Method example</h2>
+    <div class="row">
+      <ion-input color="primary" [(ngModel)]="alertText"></ion-input>
+      <ion-button (click)="getAppVersion()">Get app version</ion-button>
+    </div>
+    <h2>Async callback example</h2>
+    <p *ngIf="callBackStatus">
+      Status: {{callBackStatus}}
+    </p>
+    <div class="row">
+      <ion-input type="number" color="primary" [(ngModel)]="a"></ion-input>
+      <ion-input type="number" color="primary" [(ngModel)]="b"></ion-input>
+      <ion-button (click)="compute()">Compute</ion-button>
+    </div>
+    <h2>Async multiplecallback example</h2>
+    <p *ngIf="multipleCallBackStatus">
+      Response: {{multipleCallBackStatus}}
+    </p>
+    <div class="row">
+      <ion-button (click)="subscribe()">Subscribe</ion-button>
+      <ion-button *ngIf="callbackId" (click)="unsubscribe()">Unsubscribe</ion-button>
+    </div>
   </div>
 </ion-content>
