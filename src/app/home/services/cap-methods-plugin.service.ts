@@ -71,6 +71,3 @@ export class CapMethodsPluginService {
     }
   }
 }
-
-//https://capacitorjs.com/docs/plugins/method-types
-//https://capacitorjs.com/docs/core-apis/saving-calls
